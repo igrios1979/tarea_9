@@ -13,6 +13,14 @@ public class Curso {
     public Curso() {
     }
 
+    public Curso(Long id, String nombre, String descripcion, String instructor, Double duracion) {
+        this.id = id;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.instructor = instructor;
+        this.duracion = duracion;
+    }
+
     public Long getId() {
         return id;
     }

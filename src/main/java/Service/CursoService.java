@@ -9,4 +9,13 @@ public interface CursoService {
 
     List<Curso> listar();
     Optional<Optional<Curso>> porNombre(String nombre);
+
+    Optional<Curso> porId(Long id);
+
+    void guardar(Curso curso);
+
+    void eliminar(Long id);
+
+
+    List<Curso> porNombreLike(String nombre);
 }

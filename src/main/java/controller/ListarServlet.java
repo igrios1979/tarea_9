@@ -11,6 +11,7 @@ import models.Curso;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -41,7 +42,6 @@ public class ListarServlet extends HttpServlet {
             getServletContext().getRequestDispatcher("/vista_curso.jsp").forward(req,resp);
 
         }
-
 
     }
 }

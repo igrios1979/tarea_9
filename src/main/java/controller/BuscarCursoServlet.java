@@ -27,6 +27,5 @@ public class BuscarCursoServlet extends HttpServlet {
         resp.setContentType("text/html;charset=UTF-8");
         req.setAttribute("cursos",cursos);
         getServletContext().getRequestDispatcher("/vista_curso.jsp").forward(req,resp);
-
     }
 }

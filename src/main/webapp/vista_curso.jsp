@@ -58,6 +58,10 @@
         <body>
             <h1>Lista Cursos</h1>
 
+
+            <p><a href="<%=request.getContextPath()%>/formServlet"> CREAR |+| </a></p>
+
+
             <form id="busqueda-form" action="${pageContext.request.contextPath}/buscar_nombre" method="GET">
                 <label for="curso">Curso:</label>
                 <input type="text" id="curso" name="curso" placeholder="Nombre del curso">
@@ -74,6 +78,9 @@
                     <th>Descripcion</th>
                     <th>Instructor</th>
                     <th>Duracion</th>
+                    <th>Eliminar</th>
+                    <th>Editar</th>
+
 
                 </tr>
                 <% for (Curso c : cursos) { %>
@@ -83,6 +90,11 @@
                     <td><%= c.getDescripcion()%></td>
                     <td><%= c.getInstructor()%></td>
                     <td><%= c.getDuracion()%></td>
+
+                    <td><a href="<%= request.getContextPath() %>/formServlet?id=<%= c.getId() %>">Editar</a></td>
+
+                    <td><a onclick="return confirm('Estas seguro que deseas eliminar el producto <%= c.getNombre() %>?');"
+                           href="<%= request.getContextPath() %>/EliminaCur?id=<%=c.getId()%>">Eliminar</a></td>
 
                                  </tr>
                 <% } %>
